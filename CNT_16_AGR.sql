@@ -6,7 +6,7 @@
         
             CUIIO,
             COUNT (*) AS CNT 
-        
+        --
         
         FROM CIS2.VW_DATA_ALL
         
