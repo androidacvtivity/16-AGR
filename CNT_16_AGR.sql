@@ -12,7 +12,7 @@
         
         WHERE 
         
-        FORM = 34
+        FORM = 36
         AND PERIOADA = 2010 
         
         GROUP BY 
