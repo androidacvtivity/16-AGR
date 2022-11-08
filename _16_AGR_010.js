@@ -114,6 +114,100 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
 
 
+
+    // Start 36-002
+    for (var i = 10; i <= 305; i++) {
+        {
+            if (i < 85 && fun_row_36_001(i)) {
+                if (
+                    
+                    !isNaN(Number(values["CAP1_R0" + i + "_C6"]))
+                    && !isNaN(Number(values["CAP1_R0" + i + "_C7"]))
+                    && !isNaN(Number(values["CAP1_R0" + i + "_C8"]))
+                    && !isNaN(Number(values["CAP1_R0" + i + "_C9"]))
+                    && !isNaN(Number(values["CAP1_R0" + i + "_C10"]))
+                    && !isNaN(Number(values["CAP1_R0" + i + "_C14"]))
+                    && !isNaN(Number(values["CAP1_R0" + i + "_C15"]))
+
+
+                ) {
+
+
+
+                    var col6 = Number(values["CAP1_R0" + i + "_C6"]);
+                    var col7 = Number(values["CAP1_R0" + i + "_C7"]);
+                    var col8 = Number(values["CAP1_R0" + i + "_C8"]);
+                    var col9 = Number(values["CAP1_R0" + i + "_C9"]);
+                    var col10 = Number(values["CAP1_R0" + i + "_C10"]);
+                    var col14 = Number(values["CAP1_R0" + i + "_C14"]);
+                    var col15 = Number(values["CAP1_R0" + i + "_C15"]);
+
+                    var SUM_36_002 = col7 + col8 + col9 + col10 + col14 + col15 
+ 
+
+                    if (col6 < SUM_36_002) {
+                        webform.errors.push({
+                            'fieldName': 'CAP1_R0' + i + '_C6',
+                            'weight': 3,
+                            'msg': Drupal.t('Cod eroare: 36-002 Cap.I, COL6 >= COL(7+8+9+10+14+15) pe toate rindurile - @col6 <  @SUM_36_002 ', { "@col6": col6, "@SUM_36_002": SUM_COL4_COL5 })
+                        });
+                    }
+                }
+            }
+            else {
+
+                if (i > 85 && fun_row_36_001(i)) {
+
+                    if (
+                        
+                        !isNaN(Number(values["CAP1_R" + i + "_C6"]))
+                        && !isNaN(Number(values["CAP1_R" + i + "_C7"]))
+                        && !isNaN(Number(values["CAP1_R" + i + "_C8"]))
+                        && !isNaN(Number(values["CAP1_R" + i + "_C9"]))
+                        && !isNaN(Number(values["CAP1_R" + i + "_C10"]))
+                        && !isNaN(Number(values["CAP1_R" + i + "_C14"]))
+                        && !isNaN(Number(values["CAP1_R" + i + "_C15"]))
+
+
+                    ) {
+
+
+
+                        var col6 = Number(values["CAP1_R" + i + "_C6"]);
+                        var col7 = Number(values["CAP1_R" + i + "_C7"]);
+                        var col8 = Number(values["CAP1_R" + i + "_C8"]);
+                        var col9 = Number(values["CAP1_R" + i + "_C9"]);
+                        var col10 = Number(values["CAP1_R" + i + "_C10"]);
+                        var col14 = Number(values["CAP1_R" + i + "_C14"]);
+                        var col15 = Number(values["CAP1_R" + i + "_C15"]);
+
+                        var SUM_36_002 = col7 + col8 + col9 + col10 + col14 + col15 
+
+
+                        if (col6 < SUM_36_002) {
+                            webform.errors.push({
+                                'fieldName': 'CAP1_R' + i + '_C6',
+                                'weight': 4,
+                                'msg': Drupal.t('Cod eroare: 36-002 Cap.I, COL6 >= COL(7+8+9+10+14+15) pe toate rindurile - @col6 <  @SUM_36_002 ', { "@col6": col6, "@SUM_36_002": SUM_36_002 })
+                            });
+                        }
+                    }
+                }
+
+
+
+            }
+
+
+
+
+
+
+        }
+    }
+
+    //End 36-002
+
     //Sort warnings & errors
     webform.warnings.sort(function (a, b) {
         return sort_errors_warinings(a, b);
