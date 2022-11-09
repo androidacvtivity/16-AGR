@@ -455,7 +455,7 @@ webform.validators.agr16 = function (v, allowOverpass) {
                         if (col16 != SUM_36_005) {
                             webform.errors.push({
                                 'fieldName': 'CAP1_R' + i + '_C16',
-                                'weight': 8,
+                                'weight': 10,
                                 'msg': Drupal.t('Cod eroare: 36-005 Cap.I, COL16 = COL(1+2+3-6) pe toate rindurile - @col16 <>  @SUM_36_005 ', { "@col16": col16, "@SUM_36_005": SUM_36_005 })
                             });
                         }
@@ -476,6 +476,54 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
     //End 36-005
 
+
+    //Start 36-006
+
+
+    for (var i = 1; i <= 16; i++) {
+        if (!isNaN(Number(values["CAP1_R010_C" + i]))) {
+            var R010_C = Number(values["CAP1_R010_C" + i]);
+        }
+
+
+        if (!isNaN(Decimal(values["CAP1_R011_C" + i] || 0)
+            .plus(values["CAP1_R012_C" + i] || 0)
+            .plus(values["CAP1_R013_C" + i] || 0)
+            .plus(values["CAP1_R014_C" + i] || 0)
+            .plus(values["CAP1_R015_C" + i] || 0)
+            .plus(values["CAP1_R016_C" + i] || 0)
+            .plus(values["CAP1_R017_C" + i] || 0)
+            .plus(values["CAP1_R018_C" + i] || 0)
+
+
+        )) {
+
+            var SUM_36_006 = Decimal(values["CAP1_R011_C" + i] || 0)
+                .plus(values["CAP1_R012_C" + i] || 0)
+                .plus(values["CAP1_R013_C" + i] || 0)
+                .plus(values["CAP1_R014_C" + i] || 0)
+                .plus(values["CAP1_R015_C" + i] || 0)
+                .plus(values["CAP1_R016_C" + i] || 0)
+                .plus(values["CAP1_R017_C" + i] || 0)
+                .plus(values["CAP1_R018_C" + i] || 0)
+
+
+                ;
+        }
+
+
+        if (R010_C != SUM_36_006) {
+            webform.errors.push({
+                'fieldName': 'CAP1_R010_C' + i,
+                'weight': 11,
+                'msg': Drupal.t('Cod eroare: 36-006. Rind.010 = Rind.(011+012+013+014+015+016+017+018) pe toate coloanele - [@R010_C <> @SUM_36_006]', { '@R010_C': R010_C, '@SUM_36_006': SUM_36_006 })
+            });
+        }
+    }
+
+
+
+    //End 36-006
 
     //Sort warnings & errors
     webform.warnings.sort(function (a, b) {
