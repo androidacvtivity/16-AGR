@@ -42,7 +42,7 @@ SELECT
         
          WHERE
          1=1
-         AND A.FORM  = 35
+         AND A.FORM  = 36
          
          AND A.CONTROL_VERS <=:pPERIOADA 
                
@@ -57,7 +57,7 @@ SELECT
         
          WHERE
          1=1
-         AND B.FORM  = 35
+         AND B.FORM  = 36
          AND B.STATUT <> '3'
          
         

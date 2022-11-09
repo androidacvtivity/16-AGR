@@ -295,6 +295,98 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
     //End 36-003
 
+
+    // Start 36-004
+    for (var i = 10; i <= 305; i++) {
+        {
+            if (i < 85 && fun_row_36_001(i)) {
+                if (
+
+                    !isNaN(Number(values["CAP1_R0" + i + "_C1"]))
+                    && !isNaN(Number(values["CAP1_R0" + i + "_C2"]))
+                    && !isNaN(Number(values["CAP1_R0" + i + "_C3"]))
+                    && !isNaN(Number(values["CAP1_R0" + i + "_C6"]))
+                    && !isNaN(Number(values["CAP1_R0" + i + "_C16"]))
+
+
+
+                ) {
+
+
+
+                    var col1 = Number(values["CAP1_R0" + i + "_C1"]);
+                    var col2 = Number(values["CAP1_R0" + i + "_C2"]);
+                    var col3 = Number(values["CAP1_R0" + i + "_C3"]);
+                    var col6 = Number(values["CAP1_R0" + i + "_C6"]);
+                    var col16 = Number(values["CAP1_R0" + i + "_C16"]);
+
+
+                    var SUM_36_004_1 = col1 + col2 + col3
+                    var SUM_36_004_2 = col6 + col16
+
+                    if (SUM_36_004_1 < SUM_36_004_2) {
+                        webform.errors.push({
+                            'fieldName': 'CAP1_R0' + i + '_C1',
+                            'weight': 7,
+                            'msg': Drupal.t('Cod eroare: 36-004 Cap.I, COL(1+2+3) >= COL(6+16) pe toate rindurile - @SUM_36_004_1 <>  @SUM_36_004_2 ', { "@SUM_36_004_1": SUM_36_004_1, "@SUM_36_004_2": SUM_36_004_2 })
+                        });
+                    }
+                }
+            }
+            else {
+
+                if (i > 85 && fun_row_36_001(i)) {
+
+                    if (
+
+
+
+                        !isNaN(Number(values["CAP1_R0" + i + "_C1"]))
+                        && !isNaN(Number(values["CAP1_R0" + i + "_C2"]))
+                        && !isNaN(Number(values["CAP1_R0" + i + "_C3"]))
+                        && !isNaN(Number(values["CAP1_R0" + i + "_C6"]))
+                        && !isNaN(Number(values["CAP1_R0" + i + "_C16"]))
+
+
+
+                    ) {
+
+
+
+                        var col1 = Number(values["CAP1_R0" + i + "_C1"]);
+                        var col2 = Number(values["CAP1_R0" + i + "_C2"]);
+                        var col3 = Number(values["CAP1_R0" + i + "_C3"]);
+                        var col6 = Number(values["CAP1_R0" + i + "_C6"]);
+                        var col16 = Number(values["CAP1_R0" + i + "_C16"]);
+
+                        var SUM_36_004_1 = col1 + col2 + col3
+                        var SUM_36_004_2 = col6 + col16
+
+
+                        if (SUM_36_004_1 < SUM_36_004_2) {
+                            webform.errors.push({
+                                'fieldName': 'CAP1_R' + i + '_C1',
+                                'weight': 8,
+                                'msg': Drupal.t('Cod eroare: 36-004 Cap.I, COL(1+2+3) >= COL(6+16) pe toate rindurile - @col10 <>  @SUM_36_003 ', { "@col10": col10, "@SUM_36_003": SUM_36_003 })
+                            });
+                        }
+                    }
+                }
+
+
+
+            }
+
+
+
+
+
+
+        }
+    }
+
+    //End 36-004
+
     //Sort warnings & errors
     webform.warnings.sort(function (a, b) {
         return sort_errors_warinings(a, b);
