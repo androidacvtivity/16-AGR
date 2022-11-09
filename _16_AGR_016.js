@@ -328,7 +328,7 @@ webform.validators.agr16 = function (v, allowOverpass) {
                         webform.errors.push({
                             'fieldName': 'CAP1_R0' + i + '_C1',
                             'weight': 7,
-                            'msg': Drupal.t('Cod eroare: 36-004 Cap.I, COL(1+2+3) >= COL(6+16) pe toate rindurile - @SUM_36_004_1 <>  @SUM_36_004_2 ', { "@SUM_36_004_1": SUM_36_004_1, "@SUM_36_004_2": SUM_36_004_2 })
+                            'msg': Drupal.t('Cod eroare: 36-004 Cap.I, COL(1+2+3) >= COL(6+16) pe toate rindurile - @SUM_36_004_1 <  @SUM_36_004_2 ', { "@SUM_36_004_1": SUM_36_004_1, "@SUM_36_004_2": SUM_36_004_2 })
                         });
                     }
                 }
@@ -341,11 +341,11 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
 
 
-                        !isNaN(Number(values["CAP1_R0" + i + "_C1"]))
-                        && !isNaN(Number(values["CAP1_R0" + i + "_C2"]))
-                        && !isNaN(Number(values["CAP1_R0" + i + "_C3"]))
-                        && !isNaN(Number(values["CAP1_R0" + i + "_C6"]))
-                        && !isNaN(Number(values["CAP1_R0" + i + "_C16"]))
+                        !isNaN(Number(values["CAP1_R" + i + "_C1"]))
+                        && !isNaN(Number(values["CAP1_R" + i + "_C2"]))
+                        && !isNaN(Number(values["CAP1_R" + i + "_C3"]))
+                        && !isNaN(Number(values["CAP1_R" + i + "_C6"]))
+                        && !isNaN(Number(values["CAP1_R" + i + "_C16"]))
 
 
 
@@ -353,11 +353,11 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
 
 
-                        var col1 = Number(values["CAP1_R0" + i + "_C1"]);
-                        var col2 = Number(values["CAP1_R0" + i + "_C2"]);
-                        var col3 = Number(values["CAP1_R0" + i + "_C3"]);
-                        var col6 = Number(values["CAP1_R0" + i + "_C6"]);
-                        var col16 = Number(values["CAP1_R0" + i + "_C16"]);
+                        var col1 = Number(values["CAP1_R" + i + "_C1"]);
+                        var col2 = Number(values["CAP1_R" + i + "_C2"]);
+                        var col3 = Number(values["CAP1_R" + i + "_C3"]);
+                        var col6 = Number(values["CAP1_R" + i + "_C6"]);
+                        var col16 = Number(values["CAP1_R" + i + "_C16"]);
 
                         var SUM_36_004_1 = col1 + col2 + col3
                         var SUM_36_004_2 = col6 + col16
@@ -367,7 +367,7 @@ webform.validators.agr16 = function (v, allowOverpass) {
                             webform.errors.push({
                                 'fieldName': 'CAP1_R' + i + '_C1',
                                 'weight': 8,
-                                'msg': Drupal.t('Cod eroare: 36-004 Cap.I, COL(1+2+3) >= COL(6+16) pe toate rindurile - @col10 <>  @SUM_36_003 ', { "@col10": col10, "@SUM_36_003": SUM_36_003 })
+                                'msg': Drupal.t('Cod eroare: 36-004 Cap.I, COL(1+2+3) >= COL(6+16) pe toate rindurile - @SUM_36_004_1 <  @SUM_36_003 ', { "@SUM_36_004_2": SUM_36_004_1, "@SUM_36_004_2": SUM_36_004_2 })
                             });
                         }
                     }
