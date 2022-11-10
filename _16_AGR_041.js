@@ -985,19 +985,25 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
 
 
-        if (!isNaN(Number(values["CAP1_R080_C12"]))) {
-            var col1 = Number(values["CAP1_R080_C12"]);
+        if (!isNaN(Number(values["CAP1_R230_C11"]))) {
+            var col1 = Number(values["CAP1_R230_C11"]);
         }
 
-        if (!isNaN(Number(values["CAP1_R295_C2"]))) {
-            var col2 = Number(values["CAP1_R295_C2"]);
+        if (!isNaN(Number(values["CAP1_R240_C11"]))) {
+            var col2 = Number(values["CAP1_R240_C11"]);
         }
 
-        if ((col1 > 0 && col2 == 0)) {
+
+        if (!isNaN(Number(values["CAP1_R250_C2"]))) {
+            var col3 = Number(values["CAP1_R250_C2"]);
+        }
+
+
+        if ((col1 > 0 && (col2 == 0 && col3 == 0) )) {
             webform.errors.push({
-                'fieldName': 'CAP1_R295_C2',
+                'fieldName': 'CAP1_R230_C11',
                 'weight': 4,
-                'msg': Drupal.t('Cod eroare: 36-019 Cap.I, Daca Rind.080 COL12 <> 0, atunci Rind.295 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
+                'msg': Drupal.t('Cod eroare: 36-020 Cap.I, Daca Rind.230 COL11 <> 0, atunci Rind.240 COL11 <> 0 sau Rind.250 COL2 <> 0  &col1, -  &col2, -  &col3', { '&col1': col1, '&col2': col2, '&col3': col3 })
             });
         }
 
