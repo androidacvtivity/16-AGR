@@ -775,6 +775,92 @@ webform.validators.agr16 = function (v, allowOverpass) {
  //End 36-013
 
 
+    // Start 36-013
+
+    {
+
+
+
+        if (!isNaN(Number(values["CAP1_R011_C11"]))) {
+            var col1 = Number(values["CAP1_R011_C11"]);
+        }
+
+        if (!isNaN(Number(values["CAP1_R171_C2"]))) {
+            var col2 = Number(values["CAP1_R171_C2"]);
+        }
+
+        if ((col1 > 0 && col2 == 0)) {
+            webform.errors.push({
+                'fieldName': 'CAP1_R171_C2',
+                'weight': 4,
+                'msg': Drupal.t('Cod eroare: 36-013 Cap.I, Daca Rind.011 COL11 <> 0, atunci Rind.171 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
+            });
+        }
+
+
+    }
+
+
+ //End 36-013
+
+
+    // Start 36-014
+
+    {
+
+
+
+        if (!isNaN(Number(values["CAP1_R015_C11"]))) {
+            var col1 = Number(values["CAP1_R015_C11"]);
+        }
+
+        if (!isNaN(Number(values["CAP1_R172_C2"]))) {
+            var col2 = Number(values["CAP1_R172_C2"]);
+        }
+
+        if ((col1 > 0 && col2 == 0)) {
+            webform.errors.push({
+                'fieldName': 'CAP1_R172_C2',
+                'weight': 4,
+                'msg': Drupal.t('Cod eroare: 36-014 Cap.I, Daca Daca Rind.015 COL11 <> 0, atunci Rind.172 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
+            });
+        }
+
+
+    }
+
+
+ //End 36-014
+
+
+
+    // Start 36-015
+
+    {
+
+
+
+        if (!isNaN(Number(values["CAP1_R030_C10"]))) {
+            var col1 = Number(values["CAP1_R030_C10"]);
+        }
+
+        if (!isNaN(Number(values["CAP1_R205_C2"]))) {
+            var col2 = Number(values["CAP1_R205_C2"]);
+        }
+
+        if ((col1 > 0 && col2 == 0)) {
+            webform.errors.push({
+                'fieldName': 'CAP1_R205_C2',
+                'weight': 4,
+                'msg': Drupal.t('Cod eroare: 36-015 Cap.I, Daca Rind.030 COL10 <> 0, atunci Rind.205 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
+            });
+        }
+
+
+    }
+
+
+ //End 36-015
 
 
     //Sort warnings & errors
