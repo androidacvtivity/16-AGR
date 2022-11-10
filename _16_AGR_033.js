@@ -717,6 +717,36 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
 
 
+    // Start 36-012
+   
+        {
+            
+
+
+        if (!isNaN(Number(values["CAP1_R020_C10"]))) {
+            var col1 = Number(values["CAP1_R020_C10"]);
+                }
+
+        if (!isNaN(Number(values["CAP1_R200_C2"]))) {
+            var col2 = Number(values["CAP1_R200_C2"]);
+                }
+
+                if ((col1 > 0 && col2 == 0)) {
+                    webform.errors.push({
+                        'fieldName': 'CAP1_R200_C2',
+                        'weight': 4,
+                        'msg': Drupal.t('Cod eroare: 36-012 Cap.I, Daca Rind.020 COL10 <> 0, atunci Rind.200 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
+                    });
+                }
+                
+            
+        }
+   
+
+ //End 36-012
+
+
+
     //End 36-011
 
     //Sort warnings & errors
