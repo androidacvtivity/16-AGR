@@ -1046,6 +1046,39 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
  //End 36-021
 
+
+    // Start 36-022
+
+    {
+
+
+
+        if (!isNaN(Number(values["CAP1_R030_C10"]))) {
+            var col1 = Number(values["CAP1_R030_C10"]);
+        }
+
+        if (!isNaN(Number(values["CAP1_R205_C2"]))) {
+            var col2 = Number(values["CAP1_R205_C2"]);
+        }
+
+
+
+
+
+        if (col1 < col2) {
+            webform.errors.push({
+                'fieldName': 'CAP1_R205_C2',
+                'weight': 25,
+                'msg': Drupal.t('Cod eroare: 36-022 Cap.I, Rind.030 COL10 > Rind.205 COL2  [&col1 <  &col2]', { '&col1': col1, '&col2': col2 })
+            });
+        }
+
+
+    }
+
+
+ //End 36-022
+
     //Sort warnings & errors
     webform.warnings.sort(function (a, b) {
         return sort_errors_warinings(a, b);
