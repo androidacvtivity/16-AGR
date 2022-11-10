@@ -607,6 +607,44 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
     //End 36-008
 
+
+
+    //Start 36-009
+
+
+    for (var i = 1; i <= 16; i++) {
+        if (!isNaN(Number(values["CAP1_R110_C" + i]))) {
+            var R110_C = Number(values["CAP1_R110_C" + i]);
+        }
+
+
+        if (!isNaN(Decimal(values["CAP1_R111_C" + i] || 0)
+           
+
+
+
+        )) {
+
+            var SUM_36_009 = Decimal(values["CAP1_R111_C" + i] || 0)
+    
+
+                ;
+        }
+
+
+        if (R110_C < SUM_36_009) {
+            webform.errors.push({
+                'fieldName': 'CAP1_R110_C' + i,
+                'weight': 12,
+                'msg': Drupal.t('Cod eroare: 36-009. Rind.110 >= Rind.111 pe toate coloanele - [@R110_C < @SUM_36_009]', { '@R110_C': R110_C, '@SUM_36_009': SUM_36_009 })
+            });
+        }
+    }
+
+
+
+    //End 36-009
+
     //Sort warnings & errors
     webform.warnings.sort(function (a, b) {
         return sort_errors_warinings(a, b);
