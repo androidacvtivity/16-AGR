@@ -683,6 +683,42 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
     //End 36-010
 
+
+    //Start 36-011
+    
+    for (var i = 1; i <= 16; i++) {
+        if (!isNaN(Number(values["CAP1_R195_C" + i]))) {
+            var R195_C = Number(values["CAP1_R195_C" + i]);
+        }
+
+
+        if (!isNaN(Decimal(values["CAP1_R196_C" + i] || 0)
+            .plus(values["CAP1_R197_C" + i] || 0)
+            .plus(values["CAP1_R198_C" + i] || 0)
+
+        )) {
+
+            var SUM_36_011 = Decimal(values["CAP1_R196_C" + i] || 0)
+                .plus(values["CAP1_R197_C" + i] || 0)
+                .plus(values["CAP1_R198_C" + i] || 0)
+
+                ;
+        }
+
+
+        if (R195_C < SUM_36_011) {
+            webform.errors.push({
+                'fieldName': 'CAP1_R195_C' + i,
+                'weight': 12,
+                'msg': Drupal.t('Cod eroare: 36-011. Rind.195 >= Rind.(196+197+198) pe toate coloanele - [@R195_C < @SUM_36_011]', { '@R195_C': R195_C, '@SUM_36_011': SUM_36_011 })
+            });
+        }
+    }
+
+
+
+    //End 36-011
+
     //Sort warnings & errors
     webform.warnings.sort(function (a, b) {
         return sort_errors_warinings(a, b);
