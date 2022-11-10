@@ -525,6 +525,47 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
     //End 36-006
 
+
+    //Start 36-007
+
+
+    for (var i = 1; i <= 16; i++) {
+        if (!isNaN(Number(values["CAP1_R060_C" + i]))) {
+            var R060_C = Number(values["CAP1_R060_C" + i]);
+        }
+
+
+        if (!isNaN(Decimal(values["CAP1_R061_C" + i] || 0)
+            .plus(values["CAP1_R062_C" + i] || 0)
+            .plus(values["CAP1_R063_C" + i] || 0)
+           
+
+
+        )) {
+
+            var SUM_36_007 = Decimal(values["CAP1_R061_C" + i] || 0)
+                .plus(values["CAP1_R062_C" + i] || 0)
+                .plus(values["CAP1_R063_C" + i] || 0)
+              
+
+
+                ;
+        }
+
+
+        if (R060_C < SUM_36_007) {
+            webform.errors.push({
+                'fieldName': 'CAP1_R060_C' + i,
+                'weight': 12,
+                'msg': Drupal.t('Cod eroare: 36-007. Rind.060 >= ∑rind.(061+062+063)  pe toate coloanele - [@R060_C < @SUM_36_007]', { '@R060_C': R060_C, '@SUM_36_007': SUM_36_007 })
+            });
+        }
+    }
+
+
+
+    //End 36-007
+
     //Sort warnings & errors
     webform.warnings.sort(function (a, b) {
         return sort_errors_warinings(a, b);
