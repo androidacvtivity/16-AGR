@@ -645,6 +645,44 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
     //End 36-009
 
+
+    //Start 36-010
+
+
+    for (var i = 1; i <= 16; i++) {
+        if (!isNaN(Number(values["CAP1_R170_C" + i]))) {
+            var R170_C = Number(values["CAP1_R170_C" + i]);
+        }
+
+
+        if (!isNaN(Decimal(values["CAP1_R171_C" + i] || 0)
+            .plus(values["CAP1_R172_C" + i] || 0)
+           
+
+
+
+        )) {
+
+            var SUM_36_010 = Decimal(values["CAP1_R171_C" + i] || 0)
+                .plus(values["CAP1_R172_C" + i] || 0)
+    
+                ;
+        }
+
+
+        if (R170_C < SUM_36_010) {
+            webform.errors.push({
+                'fieldName': 'CAP1_R170_C' + i,
+                'weight': 12,
+                'msg': Drupal.t('Cod eroare: 36-010. Rind.170 >= Rind.(171+172) pe toate coloanele - [@R170_C < @SUM_36_010]', { '@R170_C': R170_C, '@SUM_36_010': SUM_36_010 })
+            });
+        }
+    }
+
+
+
+    //End 36-010
+
     //Sort warnings & errors
     webform.warnings.sort(function (a, b) {
         return sort_errors_warinings(a, b);
