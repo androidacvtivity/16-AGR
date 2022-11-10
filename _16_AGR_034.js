@@ -715,7 +715,7 @@ webform.validators.agr16 = function (v, allowOverpass) {
         }
     }
 
-
+    //End 36-011
 
     // Start 36-012
    
@@ -744,10 +744,38 @@ webform.validators.agr16 = function (v, allowOverpass) {
    
 
  //End 36-012
+ 
+
+    // Start 36-013
+
+    {
 
 
 
-    //End 36-011
+        if (!isNaN(Number(values["CAP1_R011_C11"]))) {
+            var col1 = Number(values["CAP1_R011_C11"]);
+        }
+
+        if (!isNaN(Number(values["CAP1_R171_C2"]))) {
+            var col2 = Number(values["CAP1_R171_C2"]);
+        }
+
+        if ((col1 > 0 && col2 == 0)) {
+            webform.errors.push({
+                'fieldName': 'CAP1_R171_C2',
+                'weight': 4,
+                'msg': Drupal.t('Cod eroare: 36-013 Cap.I, Daca Rind.011 COL11 <> 0, atunci Rind.171 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
+            });
+        }
+
+
+    }
+
+
+ //End 36-013
+
+
+
 
     //Sort warnings & errors
     webform.warnings.sort(function (a, b) {
