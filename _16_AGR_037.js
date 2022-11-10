@@ -863,6 +863,34 @@ webform.validators.agr16 = function (v, allowOverpass) {
  //End 36-015
 
 
+    // Start 36-016
+
+    {
+
+
+
+        if (!isNaN(Number(values["CAP1_R170_C11"]))) {
+            var col1 = Number(values["CAP1_R170_C11"]);
+        }
+
+        if (!isNaN(Number(values["CAP1_R210_C2"]))) {
+            var col2 = Number(values["CAP1_R210_C2"]);
+        }
+
+        if ((col1 > 0 && col2 == 0)) {
+            webform.errors.push({
+                'fieldName': 'CAP1_R210_C2',
+                'weight': 4,
+                'msg': Drupal.t('Cod eroare: 36-016 Cap.I, Daca Rind.170 COL11 <> 0, atunci Rind.210 COL2 <> 0 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
+            });
+        }
+
+
+    }
+
+
+ //End 36-016
+
     //Sort warnings & errors
     webform.warnings.sort(function (a, b) {
         return sort_errors_warinings(a, b);
