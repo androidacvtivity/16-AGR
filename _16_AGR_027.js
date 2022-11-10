@@ -566,6 +566,47 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
     //End 36-007
 
+
+    //Start 36-008
+
+
+    for (var i = 1; i <= 16; i++) {
+        if (!isNaN(Number(values["CAP1_R080_C" + i]))) {
+            var R080_C = Number(values["CAP1_R080_C" + i]);
+        }
+
+
+        if (!isNaN(Decimal(values["CAP1_R081_C" + i] || 0)
+            .plus(values["CAP1_R082_C" + i] || 0)
+            .plus(values["CAP1_R083_C" + i] || 0)
+
+
+
+        )) {
+
+            var SUM_36_008 = Decimal(values["CAP1_R081_C" + i] || 0)
+                .plus(values["CAP1_R082_C" + i] || 0)
+                .plus(values["CAP1_R083_C" + i] || 0)
+
+
+
+                ;
+        }
+
+
+        if (R080_C < SUM_36_008) {
+            webform.errors.push({
+                'fieldName': 'CAP1_R080_C' + i,
+                'weight': 12,
+                'msg': Drupal.t('Cod eroare: 36-008. Rind.080 >= Rind.(081+082 + 083 + 084) pe toate coloanele - [@R080_C < @SUM_36_008]', { '@R080_C': R080_C, '@SUM_36_008': SUM_36_008 })
+            });
+        }
+    }
+
+
+
+    //End 36-008
+
     //Sort warnings & errors
     webform.warnings.sort(function (a, b) {
         return sort_errors_warinings(a, b);
