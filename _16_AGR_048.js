@@ -734,7 +734,7 @@ webform.validators.agr16 = function (v, allowOverpass) {
                 if ((col1 > 0 && col2 == 0)) {
                     webform.errors.push({
                         'fieldName': 'CAP1_R200_C2',
-                        'weight': 4,
+                        'weight': 14,
                         'msg': Drupal.t('Cod eroare: 36-012 Cap.I, Daca Rind.020 COL10 <> 0, atunci Rind.200 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
                     });
                 }
@@ -763,7 +763,7 @@ webform.validators.agr16 = function (v, allowOverpass) {
         if ((col1 > 0 && col2 == 0)) {
             webform.errors.push({
                 'fieldName': 'CAP1_R171_C2',
-                'weight': 4,
+                'weight': 15,
                 'msg': Drupal.t('Cod eroare: 36-013 Cap.I, Daca Rind.011 COL11 <> 0, atunci Rind.171 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
             });
         }
@@ -792,7 +792,7 @@ webform.validators.agr16 = function (v, allowOverpass) {
         if ((col1 > 0 && col2 == 0)) {
             webform.errors.push({
                 'fieldName': 'CAP1_R171_C2',
-                'weight': 4,
+                'weight': 16,
                 'msg': Drupal.t('Cod eroare: 36-013 Cap.I, Daca Rind.011 COL11 <> 0, atunci Rind.171 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
             });
         }
@@ -821,7 +821,7 @@ webform.validators.agr16 = function (v, allowOverpass) {
         if ((col1 > 0 && col2 == 0)) {
             webform.errors.push({
                 'fieldName': 'CAP1_R172_C2',
-                'weight': 4,
+                'weight': 17,
                 'msg': Drupal.t('Cod eroare: 36-014 Cap.I, Daca Daca Rind.015 COL11 <> 0, atunci Rind.172 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
             });
         }
@@ -851,7 +851,7 @@ webform.validators.agr16 = function (v, allowOverpass) {
         if ((col1 > 0 && col2 == 0)) {
             webform.errors.push({
                 'fieldName': 'CAP1_R205_C2',
-                'weight': 4,
+                'weight': 18,
                 'msg': Drupal.t('Cod eroare: 36-015 Cap.I, Daca Rind.030 COL10 <> 0, atunci Rind.205 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
             });
         }
@@ -880,7 +880,7 @@ webform.validators.agr16 = function (v, allowOverpass) {
         if ((col1 > 0 && col2 == 0)) {
             webform.errors.push({
                 'fieldName': 'CAP1_R210_C2',
-                'weight': 4,
+                'weight': 19,
                 'msg': Drupal.t('Cod eroare: 36-016 Cap.I, Daca Rind.170 COL11 <> 0, atunci Rind.210 COL2 <> 0 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
             });
         }
@@ -910,7 +910,7 @@ webform.validators.agr16 = function (v, allowOverpass) {
         if ((col1 > 0 && col2 == 0)) {
             webform.errors.push({
                 'fieldName': 'CAP1_R215_C2',
-                'weight': 4,
+                'weight': 20,
                 'msg': Drupal.t('Cod eroare: 36-017 Cap.I, Daca Rind.220 COL11 <> 0, atunci Rind.215 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
             });
         }
@@ -939,7 +939,7 @@ webform.validators.agr16 = function (v, allowOverpass) {
         if ((col1 > 0 && col2 == 0)) {
             webform.errors.push({
                 'fieldName': 'CAP1_R290_C2',
-                'weight': 4,
+                'weight': 21,
                 'msg': Drupal.t('Cod eroare: 36-018 Cap.I, Daca Rind.300 COL12 <> 0, atunci Rind.290 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
             });
         }
@@ -967,7 +967,7 @@ webform.validators.agr16 = function (v, allowOverpass) {
         if ((col1 > 0 && col2 == 0)) {
             webform.errors.push({
                 'fieldName': 'CAP1_R295_C2',
-                'weight': 4,
+                'weight': 22,
                 'msg': Drupal.t('Cod eroare: 36-019 Cap.I, Daca Rind.080 COL12 <> 0, atunci Rind.295 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
             });
         }
@@ -1002,7 +1002,7 @@ webform.validators.agr16 = function (v, allowOverpass) {
         if ((col1 > 0 && (col2 == 0 && col3 == 0) )) {
             webform.errors.push({
                 'fieldName': 'CAP1_R230_C11',
-                'weight': 4,
+                'weight': 23,
                 'msg': Drupal.t('Cod eroare: 36-020 Cap.I, Daca Rind.230 COL11 <> 0, atunci Rind.240 COL11 <> 0 sau Rind.250 COL2 <> 0  &col1, -  &col2, -  &col3', { '&col1': col1, '&col2': col2, '&col3': col3 })
             });
         }
@@ -1012,6 +1012,39 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
 
  //End 36-020
+
+
+    // Start 36-021
+
+    {
+
+
+
+        if (!isNaN(Number(values["CAP1_R030_C11"]))) {
+            var col1 = Number(values["CAP1_R030_C11"]);
+        }
+
+        if (!isNaN(Number(values["CAP1_R205_C2"]))) {
+            var col2 = Number(values["CAP1_R205_C2"]);
+        }
+
+
+      
+
+
+        if (col1 < col2 ) {
+            webform.errors.push({
+                'fieldName': 'CAP1_R205_C2',
+                'weight': 24,
+                'msg': Drupal.t('Cod eroare: 36-021 Cap.I, Rind.030 COL11 > Rind.205 COL2  [&col1 <  &col2]', { '&col1': col1, '&col2': col2 })
+            });
+        }
+
+
+    }
+
+
+ //End 36-021
 
     //Sort warnings & errors
     webform.warnings.sort(function (a, b) {
