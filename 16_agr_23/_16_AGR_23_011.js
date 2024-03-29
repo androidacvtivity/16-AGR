@@ -52,11 +52,15 @@ webform.validators.agr16 = function (v, allowOverpass) {
                     && !isNaN(Number(values["CAP3_R0" + i + "_C5"]))
                 ) {
 
+                    // Initialize variables with zero before assigning values
+                    var col3 = 0;
+                    var col4 = 0;
+                    var col5 = 0;
 
-
-                    var col3 = Number(values["CAP3_R0" + i + "_C3"]);
-                    var col4 = Number(values["CAP3_R0" + i + "_C4"]);
-                    var col5 = Number(values["CAP3_R0" + i + "_C5"]);
+//It initializes the variables with zero before the values are assigned.
+                    col3 = Number(values["CAP3_R0" + i + "_C3"]);
+                    col4 = Number(values["CAP3_R0" + i + "_C4"]);
+                    col5 = Number(values["CAP3_R0" + i + "_C5"]);
 
                     var SUM_COL4_COL5 = col4 + col5
 
@@ -80,10 +84,13 @@ webform.validators.agr16 = function (v, allowOverpass) {
                     ) {
 
 
-
-                        var col3 = Number(values["CAP3_R" + i + "_C3"]);
-                        var col4 = Number(values["CAP3_R" + i + "_C4"]);
-                        var col5 = Number(values["CAP3_R" + i + "_C5"]);
+                        // Initialize variables with zero before assigning values
+                        var col3 = 0;
+                        var col4 = 0;
+                        var col5 = 0;
+                        col3 = Number(values["CAP3_R" + i + "_C3"]);
+                        col4 = Number(values["CAP3_R" + i + "_C4"]);
+                        col5 = Number(values["CAP3_R" + i + "_C5"]);
 
                         var SUM_COL4_COL5 = col4 + col5
 
@@ -133,14 +140,22 @@ webform.validators.agr16 = function (v, allowOverpass) {
                 ) {
 
 
+                    // Initialize variables with zero before assigning values
+                    var col6 = 0;
+                    var col7 = 0;
+                    var col8 = 0;
+                    var col9 = 0;
+                    var col10 = 0;
+                    var col14 = 0;
+                    var col15 = 0;
 
-                    var col6 = Number(values["CAP3_R0" + i + "_C6"]);
-                    var col7 = Number(values["CAP3_R0" + i + "_C7"]);
-                    var col8 = Number(values["CAP3_R0" + i + "_C8"]);
-                    var col9 = Number(values["CAP3_R0" + i + "_C9"]);
-                    var col10 = Number(values["CAP3_R0" + i + "_C10"]);
-                    var col14 = Number(values["CAP3_R0" + i + "_C14"]);
-                    var col15 = Number(values["CAP3_R0" + i + "_C15"]);
+                    col6 = Number(values["CAP3_R0" + i + "_C6"]);
+                    col7 = Number(values["CAP3_R0" + i + "_C7"]);
+                    col8 = Number(values["CAP3_R0" + i + "_C8"]);
+                    col9 = Number(values["CAP3_R0" + i + "_C9"]);
+                    col10 = Number(values["CAP3_R0" + i + "_C10"]);
+                    col14 = Number(values["CAP3_R0" + i + "_C14"]);
+                    col15 = Number(values["CAP3_R0" + i + "_C15"]);
 
                     var SUM_36_002 = col7 + col8 + col9 + col10 + col14 + col15
 
@@ -172,14 +187,22 @@ webform.validators.agr16 = function (v, allowOverpass) {
                     ) {
 
 
-
-                        var col6 = Number(values["CAP3_R" + i + "_C6"]);
-                        var col7 = Number(values["CAP3_R" + i + "_C7"]);
-                        var col8 = Number(values["CAP3_R" + i + "_C8"]);
-                        var col9 = Number(values["CAP3_R" + i + "_C9"]);
-                        var col10 = Number(values["CAP3_R" + i + "_C10"]);
-                        var col14 = Number(values["CAP3_R" + i + "_C14"]);
-                        var col15 = Number(values["CAP3_R" + i + "_C15"]);
+                        // Initialize variables with zero before assigning values
+                        var col6 = 0;
+                        var col7 = 0;
+                        var col8 = 0;
+                        var col9 = 0;
+                        var col10 = 0;
+                        var col14 = 0;
+                        var col15 = 0;
+                    
+                        col6 = Number(values["CAP3_R" + i + "_C6"]);
+                        col7 = Number(values["CAP3_R" + i + "_C7"]);
+                        col8 = Number(values["CAP3_R" + i + "_C8"]);
+                        col9 = Number(values["CAP3_R" + i + "_C9"]);
+                        col10 = Number(values["CAP3_R" + i + "_C10"]);
+                        col14 = Number(values["CAP3_R" + i + "_C14"]);
+                        col15 = Number(values["CAP3_R" + i + "_C15"]);
 
                         var SUM_36_002 = col7 + col8 + col9 + col10 + col14 + col15
 
@@ -226,11 +249,15 @@ webform.validators.agr16 = function (v, allowOverpass) {
                 ) {
 
 
+                    var col10 = 0;
+                    var col11 = 0;
+                    var col12 = 0;
+                    var col13 = 0;
 
-                    var col10 = Number(values["CAP3_R0" + i + "_C10"]);
-                    var col11 = Number(values["CAP3_R0" + i + "_C11"]);
-                    var col12 = Number(values["CAP3_R0" + i + "_C12"]);
-                    var col13 = Number(values["CAP3_R0" + i + "_C13"]);
+                    col10 = Number(values["CAP3_R0" + i + "_C10"]);
+                    col11 = Number(values["CAP3_R0" + i + "_C11"]);
+                    col12 = Number(values["CAP3_R0" + i + "_C12"]);
+                    col13 = Number(values["CAP3_R0" + i + "_C13"]);
 
 
                     var SUM_36_003 = col11 + col12 + col13
@@ -261,11 +288,15 @@ webform.validators.agr16 = function (v, allowOverpass) {
                     ) {
 
 
+                        var col10 = 0;
+                        var col11 = 0;
+                        var col12 = 0;
+                        var col13 = 0;
 
-                        var col10 = Number(values["CAP3_R" + i + "_C10"]);
-                        var col11 = Number(values["CAP3_R" + i + "_C11"]);
-                        var col12 = Number(values["CAP3_R" + i + "_C12"]);
-                        var col13 = Number(values["CAP3_R" + i + "_C13"]);
+                        col10 = Number(values["CAP3_R" + i + "_C10"]);
+                        col11 = Number(values["CAP3_R" + i + "_C11"]);
+                        col12 = Number(values["CAP3_R" + i + "_C12"]);
+                        col13 = Number(values["CAP3_R" + i + "_C13"]);
 
 
                         var SUM_36_003 = col11 + col12 + col13
@@ -313,12 +344,17 @@ webform.validators.agr16 = function (v, allowOverpass) {
                 ) {
 
 
+                    var col1 = 0;
+                    var col2 = 0;
+                    var col3 = 0;
+                    var col6 = 0;
+                    var col16 = 0;
 
-                    var col1 = Number(values["CAP3_R0" + i + "_C1"]);
-                    var col2 = Number(values["CAP3_R0" + i + "_C2"]);
-                    var col3 = Number(values["CAP3_R0" + i + "_C3"]);
-                    var col6 = Number(values["CAP3_R0" + i + "_C6"]);
-                    var col16 = Number(values["CAP3_R0" + i + "_C16"]);
+                    col1 = Number(values["CAP3_R0" + i + "_C1"]);
+                    col2 = Number(values["CAP3_R0" + i + "_C2"]);
+                    col3 = Number(values["CAP3_R0" + i + "_C3"]);
+                    col6 = Number(values["CAP3_R0" + i + "_C6"]);
+                    col16 = Number(values["CAP3_R0" + i + "_C16"]);
 
 
                     var SUM_36_004_1 = col1 + col2 + col3
@@ -352,12 +388,16 @@ webform.validators.agr16 = function (v, allowOverpass) {
                     ) {
 
 
-
-                        var col1 = Number(values["CAP3_R" + i + "_C1"]);
-                        var col2 = Number(values["CAP3_R" + i + "_C2"]);
-                        var col3 = Number(values["CAP3_R" + i + "_C3"]);
-                        var col6 = Number(values["CAP3_R" + i + "_C6"]);
-                        var col16 = Number(values["CAP3_R" + i + "_C16"]);
+                        var col1 = 0;
+                        var col2 = 0;
+                        var col3 = 0;
+                        var col6 = 0;
+                        var col16 = 0;
+                        col1 = Number(values["CAP3_R" + i + "_C1"]);
+                        col2 = Number(values["CAP3_R" + i + "_C2"]);
+                        col3 = Number(values["CAP3_R" + i + "_C3"]);
+                        col6 = Number(values["CAP3_R" + i + "_C6"]);
+                        col16 = Number(values["CAP3_R" + i + "_C16"]);
 
                         var SUM_36_004_1 = col1 + col2 + col3
                         var SUM_36_004_2 = col6 + col16
@@ -403,12 +443,16 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
 
                 ) {
-
-                    var col1 = Number(values["CAP3_R0" + i + "_C1"]);
-                    var col2 = Number(values["CAP3_R0" + i + "_C2"]);
-                    var col3 = Number(values["CAP3_R0" + i + "_C3"]);
-                    var col6 = Number(values["CAP3_R0" + i + "_C6"]);
-                    var col16 = Number(values["CAP3_R0" + i + "_C16"]);
+                    var col1 = 0;
+                    var col2 = 0;
+                    var col3 = 0;
+                    var col6 = 0;
+                    var col16 = 0;
+                    col1 = Number(values["CAP3_R0" + i + "_C1"]);
+                    col2 = Number(values["CAP3_R0" + i + "_C2"]);
+                    col3 = Number(values["CAP3_R0" + i + "_C3"]);
+                    col6 = Number(values["CAP3_R0" + i + "_C6"]);
+                    col16 = Number(values["CAP3_R0" + i + "_C16"]);
 
 
 
@@ -442,12 +486,16 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
 
 
-
-                        var col1 = Number(values["CAP3_R" + i + "_C1"]);
-                        var col2 = Number(values["CAP3_R" + i + "_C2"]);
-                        var col3 = Number(values["CAP3_R" + i + "_C3"]);
-                        var col6 = Number(values["CAP3_R" + i + "_C6"]);
-                        var col16 = Number(values["CAP3_R" + i + "_C16"]);
+                        var col1 = 0;
+                        var col2 = 0;
+                        var col3 = 0;
+                        var col6 = 0;
+                        var col16 = 0;
+                        col1 = Number(values["CAP3_R" + i + "_C1"]);
+                        col2 = Number(values["CAP3_R" + i + "_C2"]);
+                        col3 = Number(values["CAP3_R" + i + "_C3"]);
+                        col6 = Number(values["CAP3_R" + i + "_C6"]);
+                        col16 = Number(values["CAP3_R" + i + "_C16"]);
 
                         var SUM_36_005 = col1 + col2 + col3 - col6
 
@@ -614,6 +662,7 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
     for (var i = 1; i <= 16; i++) {
         if (!isNaN(Number(values["CAP3_R110_C" + i]))) {
+            var R110_C = 0;
             var R110_C = Number(values["CAP3_R110_C" + i]);
         }
 
@@ -775,30 +824,30 @@ webform.validators.agr16 = function (v, allowOverpass) {
     //End 36-013
 
 
-    // Start 36-013
+    // // Start 36-013
 
-    {
-
-
-
-        if (!isNaN(Number(values["CAP3_R011_C11"]))) {
-            var col1 = Number(values["CAP3_R011_C11"]);
-        }
-
-        if (!isNaN(Number(values["CAP3_R171_C2"]))) {
-            var col2 = Number(values["CAP3_R171_C2"]);
-        }
-
-        if ((col1 > 0 && col2 == 0)) {
-            webform.errors.push({
-                'fieldName': 'CAP3_R171_C2',
-                'weight': 16,
-                'msg': Drupal.t('Cod eroare: 36-013 Cap.III, Daca Rind.011 COL11 <> 0, atunci Rind.171 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
-            });
-        }
+    // {
 
 
-    }
+
+    //     if (!isNaN(Number(values["CAP3_R011_C11"]))) {
+    //         var col1 = Number(values["CAP3_R011_C11"]);
+    //     }
+
+    //     if (!isNaN(Number(values["CAP3_R171_C2"]))) {
+    //         var col2 = Number(values["CAP3_R171_C2"]);
+    //     }
+
+    //     if ((col1 > 0 && col2 == 0)) {
+    //         webform.errors.push({
+    //             'fieldName': 'CAP3_R171_C2',
+    //             'weight': 16,
+    //             'msg': Drupal.t('Cod eroare: 36-013 Cap.III, Daca Rind.011 COL11 <> 0, atunci Rind.171 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
+    //         });
+    //     }
+
+
+    // }
 
 
     //End 36-013
@@ -806,28 +855,28 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
     // Start 36-014
 
-    {
+    // {
 
 
 
-        if (!isNaN(Number(values["CAP3_R015_C11"]))) {
-            var col1 = Number(values["CAP3_R015_C11"]);
-        }
+    //     if (!isNaN(Number(values["CAP3_R015_C11"]))) {
+    //         var col1 = Number(values["CAP3_R015_C11"]);
+    //     }
 
-        if (!isNaN(Number(values["CAP3_R172_C2"]))) {
-            var col2 = Number(values["CAP3_R172_C2"]);
-        }
+    //     if (!isNaN(Number(values["CAP3_R172_C2"]))) {
+    //         var col2 = Number(values["CAP3_R172_C2"]);
+    //     }
 
-        if ((col1 > 0 && col2 == 0)) {
-            webform.errors.push({
-                'fieldName': 'CAP3_R372_C2',
-                'weight': 17,
-                'msg': Drupal.t('Cod eroare: 36-014 Cap.III, Daca Daca Rind.015 COL11 <> 0, atunci Rind.172 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
-            });
-        }
+    //     if ((col1 > 0 && col2 == 0)) {
+    //         webform.errors.push({
+    //             'fieldName': 'CAP3_R372_C2',
+    //             'weight': 17,
+    //             'msg': Drupal.t('Cod eroare: 36-014 Cap.III, Daca Daca Rind.015 COL11 <> 0, atunci Rind.172 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
+    //         });
+    //     }
 
 
-    }
+    // }
 
 
     //End 36-014
@@ -836,28 +885,28 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
     // Start 36-015
 
-    {
+    // {
 
 
 
-        if (!isNaN(Number(values["CAP3_R030_C10"]))) {
-            var col1 = Number(values["CAP3_R030_C10"]);
-        }
+    //     if (!isNaN(Number(values["CAP3_R030_C10"]))) {
+    //         var col1 = Number(values["CAP3_R030_C10"]);
+    //     }
 
-        if (!isNaN(Number(values["CAP3_R205_C2"]))) {
-            var col2 = Number(values["CAP3_R205_C2"]);
-        }
+    //     if (!isNaN(Number(values["CAP3_R205_C2"]))) {
+    //         var col2 = Number(values["CAP3_R205_C2"]);
+    //     }
 
-        if ((col1 > 0 && col2 == 0)) {
-            webform.errors.push({
-                'fieldName': 'CAP3_R205_C2',
-                'weight': 18,
-                'msg': Drupal.t('Cod eroare: 36-015 Cap.III, Daca Rind.030 COL10 <> 0, atunci Rind.205 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
-            });
-        }
+    //     if ((col1 > 0 && col2 == 0)) {
+    //         webform.errors.push({
+    //             'fieldName': 'CAP3_R205_C2',
+    //             'weight': 18,
+    //             'msg': Drupal.t('Cod eroare: 36-015 Cap.III, Daca Rind.030 COL10 <> 0, atunci Rind.205 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
+    //         });
+    //     }
 
 
-    }
+    // }
 
 
     //End 36-015
@@ -865,58 +914,58 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
     // Start 36-016
 
-    {
+    // {
 
 
 
-        if (!isNaN(Number(values["CAP3_R170_C11"]))) {
-            var col1 = Number(values["CAP3_R170_C11"]);
-        }
+    //     if (!isNaN(Number(values["CAP3_R170_C11"]))) {
+    //         var col1 = Number(values["CAP3_R170_C11"]);
+    //     }
 
-        if (!isNaN(Number(values["CAP3_R210_C2"]))) {
-            var col2 = Number(values["CAP3_R210_C2"]);
-        }
+    //     if (!isNaN(Number(values["CAP3_R210_C2"]))) {
+    //         var col2 = Number(values["CAP3_R210_C2"]);
+    //     }
 
-        if ((col1 > 0 && col2 == 0)) {
-            webform.errors.push({
-                'fieldName': 'CAP3_R210_C2',
-                'weight': 19,
-                'msg': Drupal.t('Cod eroare: 36-016 Cap.III, Daca Rind.170 COL11 <> 0, atunci Rind.210 COL2 <> 0 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
-            });
-        }
+    //     if ((col1 > 0 && col2 == 0)) {
+    //         webform.errors.push({
+    //             'fieldName': 'CAP3_R210_C2',
+    //             'weight': 19,
+    //             'msg': Drupal.t('Cod eroare: 36-016 Cap.III, Daca Rind.170 COL11 <> 0, atunci Rind.210 COL2 <> 0 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
+    //         });
+    //     }
 
 
-    }
+    // }
 
 
     //End 36-016
 
 
 
-    // Start 36-017
+    // // Start 36-017
 
-    {
-
-
-
-        if (!isNaN(Number(values["CAP3_R220_C11"]))) {
-            var col1 = Number(values["CAP3_R220_C11"]);
-        }
-
-        if (!isNaN(Number(values["CAP3_R215_C2"]))) {
-            var col2 = Number(values["CAP3_R215_C2"]);
-        }
-
-        if ((col1 > 0 && col2 == 0)) {
-            webform.errors.push({
-                'fieldName': 'CAP3_R215_C2',
-                'weight': 20,
-                'msg': Drupal.t('Cod eroare: 36-017 Cap.III, Daca Rind.220 COL11 <> 0, atunci Rind.215 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
-            });
-        }
+    // {
 
 
-    }
+
+    //     if (!isNaN(Number(values["CAP3_R220_C11"]))) {
+    //         var col1 = Number(values["CAP3_R220_C11"]);
+    //     }
+
+    //     if (!isNaN(Number(values["CAP3_R215_C2"]))) {
+    //         var col2 = Number(values["CAP3_R215_C2"]);
+    //     }
+
+    //     if ((col1 > 0 && col2 == 0)) {
+    //         webform.errors.push({
+    //             'fieldName': 'CAP3_R215_C2',
+    //             'weight': 20,
+    //             'msg': Drupal.t('Cod eroare: 36-017 Cap.III, Daca Rind.220 COL11 <> 0, atunci Rind.215 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
+    //         });
+    //     }
+
+
+    // }
 
 
     //End 36-017
@@ -924,56 +973,56 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
     // Start 36-018
 
-    {
+    // {
 
 
 
-        if (!isNaN(Number(values["CAP3_R300_C12"]))) {
-            var col1 = Number(values["CAP3_R300_C12"]);
-        }
+    //     if (!isNaN(Number(values["CAP3_R300_C12"]))) {
+    //         var col1 = Number(values["CAP3_R300_C12"]);
+    //     }
 
-        if (!isNaN(Number(values["CAP3_R290_C2"]))) {
-            var col2 = Number(values["CAP3_R290_C2"]);
-        }
+    //     if (!isNaN(Number(values["CAP3_R290_C2"]))) {
+    //         var col2 = Number(values["CAP3_R290_C2"]);
+    //     }
 
-        if ((col1 > 0 && col2 == 0)) {
-            webform.errors.push({
-                'fieldName': 'CAP3_R290_C2',
-                'weight': 21,
-                'msg': Drupal.t('Cod eroare: 36-018 Cap.III, Daca Rind.300 COL12 <> 0, atunci Rind.290 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
-            });
-        }
+    //     if ((col1 > 0 && col2 == 0)) {
+    //         webform.errors.push({
+    //             'fieldName': 'CAP3_R290_C2',
+    //             'weight': 21,
+    //             'msg': Drupal.t('Cod eroare: 36-018 Cap.III, Daca Rind.300 COL12 <> 0, atunci Rind.290 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
+    //         });
+    //     }
 
 
-    }
+    // }
 
 
     //End 36-018
 
     // Start 36-019
 
-    {
+    // {
 
 
 
-        if (!isNaN(Number(values["CAP3_R080_C12"]))) {
-            var col1 = Number(values["CAP3_R080_C12"]);
-        }
+    //     if (!isNaN(Number(values["CAP3_R080_C12"]))) {
+    //         var col1 = Number(values["CAP3_R080_C12"]);
+    //     }
 
-        if (!isNaN(Number(values["CAP3_R295_C2"]))) {
-            var col2 = Number(values["CAP3_R295_C2"]);
-        }
+    //     if (!isNaN(Number(values["CAP3_R295_C2"]))) {
+    //         var col2 = Number(values["CAP3_R295_C2"]);
+    //     }
 
-        if ((col1 > 0 && col2 == 0)) {
-            webform.errors.push({
-                'fieldName': 'CAP3_R295_C2',
-                'weight': 22,
-                'msg': Drupal.t('Cod eroare: 36-019 Cap.III, Daca Rind.080 COL12 <> 0, atunci Rind.295 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
-            });
-        }
+    //     if ((col1 > 0 && col2 == 0)) {
+    //         webform.errors.push({
+    //             'fieldName': 'CAP3_R295_C2',
+    //             'weight': 22,
+    //             'msg': Drupal.t('Cod eroare: 36-019 Cap.III, Daca Rind.080 COL12 <> 0, atunci Rind.295 COL2 <> 0  &col1, -  &col2', { '&col1': col1, '&col2': col2 })
+    //         });
+    //     }
 
 
-    }
+    // }
 
 
     //End 36-019
@@ -1016,32 +1065,32 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
     // Start 36-021
 
-    {
+    // {
 
 
 
-        if (!isNaN(Number(values["CAP3_R030_C11"]))) {
-            var col1 = Number(values["CAP3_R030_C11"]);
-        }
+    //     if (!isNaN(Number(values["CAP3_R030_C11"]))) {
+    //         var col1 = Number(values["CAP3_R030_C11"]);
+    //     }
 
-        if (!isNaN(Number(values["CAP3_R205_C2"]))) {
-            var col2 = Number(values["CAP3_R205_C2"]);
-        }
-
-
+    //     if (!isNaN(Number(values["CAP3_R205_C2"]))) {
+    //         var col2 = Number(values["CAP3_R205_C2"]);
+    //     }
 
 
 
-        if (col1 < col2) {
-            webform.errors.push({
-                'fieldName': 'CAP3_R205_C2',
-                'weight': 24,
-                'msg': Drupal.t('Cod eroare: 36-021 Cap.III, Rind.030 COL11 > Rind.205 COL2  [&col1 <  &col2]', { '&col1': col1, '&col2': col2 })
-            });
-        }
 
 
-    }
+    //     if (col1 < col2) {
+    //         webform.errors.push({
+    //             'fieldName': 'CAP3_R205_C2',
+    //             'weight': 24,
+    //             'msg': Drupal.t('Cod eroare: 36-021 Cap.III, Rind.030 COL11 > Rind.205 COL2  [&col1 <  &col2]', { '&col1': col1, '&col2': col2 })
+    //         });
+    //     }
+
+
+    // }
 
 
     //End 36-021
@@ -1049,32 +1098,32 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
     // Start 36-022
 
-    {
+    // {
 
 
 
-        if (!isNaN(Number(values["CAP3_R030_C10"]))) {
-            var col1 = Number(values["CAP3_R030_C10"]);
-        }
+    //     if (!isNaN(Number(values["CAP3_R030_C10"]))) {
+    //         var col1 = Number(values["CAP3_R030_C10"]);
+    //     }
 
-        if (!isNaN(Number(values["CAP3_R205_C2"]))) {
-            var col2 = Number(values["CAP3_R205_C2"]);
-        }
-
-
+    //     if (!isNaN(Number(values["CAP3_R205_C2"]))) {
+    //         var col2 = Number(values["CAP3_R205_C2"]);
+    //     }
 
 
 
-        if (col1 < col2) {
-            webform.errors.push({
-                'fieldName': 'CAP3_R205_C2',
-                'weight': 25,
-                'msg': Drupal.t('Cod eroare: 36-022 Cap.III, Rind.030 COL10 > Rind.205 COL2  [&col1 <  &col2]', { '&col1': col1, '&col2': col2 })
-            });
-        }
 
 
-    }
+    //     if (col1 < col2) {
+    //         webform.errors.push({
+    //             'fieldName': 'CAP3_R205_C2',
+    //             'weight': 25,
+    //             'msg': Drupal.t('Cod eroare: 36-022 Cap.III, Rind.030 COL10 > Rind.205 COL2  [&col1 <  &col2]', { '&col1': col1, '&col2': col2 })
+    //         });
+    //     }
+
+
+    // }
 
 
     //End 36-022
