@@ -160,11 +160,11 @@ webform.validators.agr16 = function (v, allowOverpass) {
                     var SUM_36_002 = col7 + col8 + col9 + col10 + col14 + col15
 
 
-                    if (col6 < SUM_36_002) {
+                    if (col6 !== SUM_36_002) {
                         webform.errors.push({
                             'fieldName': 'CAP3_R0' + i + '_C6',
                             'weight': 3,
-                            'msg': Drupal.t('Cod eroare: 36-002 Cap.III, COL6 >= COL(7+8+9+10+14+15) pe toate rindurile - @col6 <  @SUM_36_002 ', { "@col6": col6, "@SUM_36_002": SUM_COL4_COL5 })
+                            'msg': Drupal.t('Cod eroare: 36-002 Cap.III, COL6 <> COL(7+8+9+10+14+15) pe toate rindurile - @col6 <  @SUM_36_002 ', { "@col6": col6, "@SUM_36_002": SUM_COL4_COL5 })
                         });
                     }
                 }
@@ -207,7 +207,7 @@ webform.validators.agr16 = function (v, allowOverpass) {
                         var SUM_36_002 = col7 + col8 + col9 + col10 + col14 + col15
 
 
-                        if (col6 < SUM_36_002) {
+                        if (col6 !== SUM_36_002) {
                             webform.errors.push({
                                 'fieldName': 'CAP3_R' + i + '_C6',
                                 'weight': 4,
@@ -649,6 +649,35 @@ webform.validators.agr16 = function (v, allowOverpass) {
                 'msg': Drupal.t('Cod eroare: 36-008. Rind.080 >= Rind.(081+082 + 083 + 084) pe toate coloana @i - [@R080_C < @SUM_36_008]', { '@i': i, '@R080_C': R080_C, '@SUM_36_008': SUM_36_008 })
             });
         }
+
+
+        if (R080_C < SUM_36_008) {
+            webform.errors.push({
+                'fieldName': 'CAP3_R081_C' + i,
+                'weight': 12,
+                'msg': Drupal.t('Cod eroare: 36-008. Rind.080 >= Rind.(081+082 + 083 + 084) pe toate coloana @i - [@R080_C < @SUM_36_008]', { '@i': i, '@R080_C': R080_C, '@SUM_36_008': SUM_36_008 })
+            });
+        }
+
+
+        if (R080_C < SUM_36_008) {
+            webform.errors.push({
+                'fieldName': 'CAP3_R082_C' + i,
+                'weight': 12,
+                'msg': Drupal.t('Cod eroare: 36-008. Rind.080 >= Rind.(081+082 + 083 + 084) pe toate coloana @i - [@R080_C < @SUM_36_008]', { '@i': i, '@R080_C': R080_C, '@SUM_36_008': SUM_36_008 })
+            });
+        }
+
+
+        if (R080_C < SUM_36_008) {
+            webform.errors.push({
+                'fieldName': 'CAP3_R083_C' + i,
+                'weight': 12,
+                'msg': Drupal.t('Cod eroare: 36-008. Rind.080 >= Rind.(081+082 + 083 + 084) pe toate coloana @i - [@R080_C < @SUM_36_008]', { '@i': i, '@R080_C': R080_C, '@SUM_36_008': SUM_36_008 })
+            });
+        }
+
+        
     }
 
 
@@ -1136,14 +1165,14 @@ webform.validators.agr16 = function (v, allowOverpass) {
         i = row;
         if (
 
-            i == 90 || i == 100 || i == 120 || i == 200 || i == 205
+            i == 90 || i == 100 || i == 120 || i == 200 
             || i == 210 || i == 220 || i == 221 || i == 225 || i == 230 || i == 235
             || i == 240 || i == 245 || i == 250 || i == 255 || i == 265 || i == 270
             || i == 275 || i == 280 || i == 281 || i == 282 || i == 283 || i == 284
-            || i == 285 || i == 286 || i == 287 || i == 290 || i == 300 || i == 500
+            || i == 285 || i == 286 || i == 290 || i == 300 || i == 500
             || i == 600 || i == 700 || i == 701 || i == 800 || i == 900 || i == 1100
-            || i == 1000
-            || i == 1101
+          
+          
 
 
 
@@ -1177,11 +1206,11 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
 
 
-                if (col1 < SUM_34_001) {
+                if (col1 != SUM_34_001) {
                     webform.errors.push({
                         'fieldName': 'CAP1_R' + (i) + '_C1',
                         'weight': 1,
-                        'msg': Drupal.t('Cod eroare: 34-001 COL1 >= COL(2 + 3 + 4 + 5) pe toate rindurile, [@col1 <  @SUM_34_001]', { "@col1": col1, "@SUM_34_001": SUM_34_001 })
+                        'msg': Drupal.t('Cod eroare: 34-001 COL1 <> COL(2 + 3 + 4 + 5) pe toate rindurile, [@col1 <>  @SUM_34_001]', { "@col1": col1, "@SUM_34_001": SUM_34_001 })
                     });
                 }
 

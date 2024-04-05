@@ -649,6 +649,35 @@ webform.validators.agr16 = function (v, allowOverpass) {
                 'msg': Drupal.t('Cod eroare: 36-008. Rind.080 >= Rind.(081+082 + 083 + 084) pe toate coloana @i - [@R080_C < @SUM_36_008]', { '@i': i, '@R080_C': R080_C, '@SUM_36_008': SUM_36_008 })
             });
         }
+
+
+        if (R080_C < SUM_36_008) {
+            webform.errors.push({
+                'fieldName': 'CAP3_R081_C' + i,
+                'weight': 12,
+                'msg': Drupal.t('Cod eroare: 36-008. Rind.080 >= Rind.(081+082 + 083 + 084) pe toate coloana @i - [@R080_C < @SUM_36_008]', { '@i': i, '@R080_C': R080_C, '@SUM_36_008': SUM_36_008 })
+            });
+        }
+
+
+        if (R080_C < SUM_36_008) {
+            webform.errors.push({
+                'fieldName': 'CAP3_R082_C' + i,
+                'weight': 12,
+                'msg': Drupal.t('Cod eroare: 36-008. Rind.080 >= Rind.(081+082 + 083 + 084) pe toate coloana @i - [@R080_C < @SUM_36_008]', { '@i': i, '@R080_C': R080_C, '@SUM_36_008': SUM_36_008 })
+            });
+        }
+
+
+        if (R080_C < SUM_36_008) {
+            webform.errors.push({
+                'fieldName': 'CAP3_R083_C' + i,
+                'weight': 12,
+                'msg': Drupal.t('Cod eroare: 36-008. Rind.080 >= Rind.(081+082 + 083 + 084) pe toate coloana @i - [@R080_C < @SUM_36_008]', { '@i': i, '@R080_C': R080_C, '@SUM_36_008': SUM_36_008 })
+            });
+        }
+
+        
     }
 
 
