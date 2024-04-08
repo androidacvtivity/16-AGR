@@ -36,15 +36,16 @@ webform.validators.agr16 = function (v, allowOverpass) {
             || 150 == i || 160 == i || 170 == i || 171 == i || 172 == i || 180 == i || 185 == i || 190 == i || 191 == i
             || 192 == i || 194 == i || 195 == i || 196 == i || 197 == i || 198 == i || 200 == i || 205 == i || 210 == i
             || 215 == i || 220 == i || 230 == i || 240 == i
-            || 250 == i || 256 == i || 260 == i || 265 == i || 270 == i || 275 == i || 280 == i || 290 == i || 295 == i
-            || 300 == i
+            || 250 == i || 256 == i || 260 == i || 265 == i || 270 == i 
+            
+         
         )
             return true;
 
     }
 
     // Start 36-001
-    for (var i = 10; i <= 305; i++) {
+    for (var i = 10; i <= 270; i++) {
         {
             if (i < 85 && fun_row_36_001(i)) {
                 if (!isNaN(Number(values["CAP3_R0" + i + "_C3"]))
@@ -1206,11 +1207,11 @@ webform.validators.agr16 = function (v, allowOverpass) {
 
 
 
-                if (col1 != SUM_34_001) {
+                if (col1 < SUM_34_001) {
                     webform.errors.push({
                         'fieldName': 'CAP1_R' + (i) + '_C1',
                         'weight': 1,
-                        'msg': Drupal.t('Cod eroare: 34-001 COL1 <> COL(2 + 3 + 4 + 5) pe toate rindurile, [@col1 <>  @SUM_34_001]', { "@col1": col1, "@SUM_34_001": SUM_34_001 })
+                        'msg': Drupal.t('Cod eroare: 34-001 COL1 >= COL(2 + 3 + 4 + 5) pe toate rindurile, [@col1 <  @SUM_34_001]', { "@col1": col1, "@SUM_34_001": SUM_34_001 })
                     });
                 }
 
