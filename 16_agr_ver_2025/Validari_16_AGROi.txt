@@ -113,7 +113,7 @@ Regulile de validare
 
 
 
-2. Validari 
+2. Validari ----------------------
 Drupal.t('Cod eroare: 35-008. Daca Coloana 1 (pentru rindurile 0100, 0200, 0300, 0400) <> 0, atunci Coloana 3 <> 0 si invers - [@col1, @col3]', { '@col1': col1, '@col3': col3 })
 
 Drupal.t('Cod eroare: 35-009. Daca Coloana 2 (pentru rindurile 0100, 0200, 0300, 0400) <> 0, atunci Coloana 4 <> 0 si invers - [@col2, @col4]', { '@col2': col2, '@col4': col4 })
