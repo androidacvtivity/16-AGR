@@ -1,0 +1,18 @@
+Modificari pentru raportul 16 AGR in E-raportare:
+
+    Introd. In capitol I: Adauga (mii lei).
+    Modificari in Cap. I, Randul 210: In coloana 3, adauga un „X”.
+    Introd. In capitol I: nu sunt erorile pentru aceste controale 34-008, 34-009, 34-010, 34-011, 34-012, 34-013, 34-014, 34-015:
+    De adaugat Control Cap. II (informativ):
+
+-              Daca Coloana 1 (pentru randurile 0100, 0200, 0300, 0400) ≠ 0, atunci Coloana 3 (pentru aceleasi randuri) ≠ 0 si invers.
+
+-              Daca Coloana 2 (pentru randurile 0100, 0200, 0300, 0400) ≠ 0, atunci Coloana 4 (pentru aceleasi randuri) ≠ 0 si invers.
+
+-              Daca Coloana 5 (pentru randurile 0100, 0200, 0300, 0400) ≠ 0, atunci Coloana 7 (pentru aceleasi randuri) ≠ 0 si invers.
+
+-              Daca Coloana 6 (pentru randurile 0100, 0200, 0300, 0400) ≠ 0, atunci Coloana 8 (pentru aceleasi randuri) ≠ 0 si invers.
+
+    Verifica eroarea 36-007 la coloanele 6 si 16 .
+
+Inainte de a face modificarile, te rog sa ma suni.
