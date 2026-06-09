@@ -1,0 +1,13 @@
+
+CREATE TABLE user_bancu.F_XML_FORMS
+as 
+
+SELECT F.*
+
+FROM F_XML_FORMS f
+
+where
+f.DATA_REG >= TO_DATE('01/01/2025 00:00:00', 'MM/DD/YYYY HH24:MI:SS')
+  AND f.FORM_TYPE = '16_agr_23'
+  AND f.STATUS = 5
+ 

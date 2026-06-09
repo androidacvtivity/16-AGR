@@ -1,0 +1,6 @@
+SELECT F.FORMID
+
+FROM USER_BANCU.F_XML_FORMS_D f
+
+where
+ID <= 10 
